@@ -7,7 +7,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((priv) => !priv);
   };
 
   return (

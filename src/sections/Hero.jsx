@@ -26,14 +26,25 @@ const Hero = () => {
             </button>
           </div>
           <div className="flex justify-start gap-3 items-center flex-1 relative">
-            <div className="flex justify-center">
+            <div className="flex justify-center relative">
               {users.map((user, index) => (
-                <div key={index}>
-                  <img src={user.profile} alt="Users" width={36} height={36} />
+                <div
+                  className="absolute -top-4 w-[36px] h-[36px]"
+                  key={index}
+                  style={{ left: index * 25 }}
+                >
+                  <img
+                    src={user.profile}
+                    alt="Users"
+                    className="w-full h-full"
+                  />
                 </div>
               ))}
+              <div className="bg-light-cyan size-9 rounded-full absolute -top-4 left-[150px] border-[2px] border-white flex justify-center items-center font-manrope text-[8px] font-extrabold">
+                1.6k+
+              </div>
             </div>
-            <p className="text-white text-[12px]">
+            <p className="text-white text-[12px] ml-48">
               1,600 people requested access a visit in last 24 hours
             </p>
           </div>
